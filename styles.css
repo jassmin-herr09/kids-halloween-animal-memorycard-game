@@ -1,10 +1,18 @@
-@font-face {
-font-family: 'Atma', cursive;
-src: url("Assets/Fonts/Atma.woff") format("woff")
-}
 
 * {
  box-sizing: border-box;
  font-family: 'Atma', cursive;
 
 }
+
+body{
+ margin: 0;
+ background:#F75F1C;
+}
+
+.page-title{
+    color:black;
+    font-family: Atma;
+    text-align: center;
+}
+
