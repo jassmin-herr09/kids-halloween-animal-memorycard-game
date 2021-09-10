@@ -1,0 +1,10 @@
+@font-face {
+font-family: 'Atma', cursive;
+src: url("Assets/Fonts/Atma.woff") format("woff")
+}
+
+* {
+ box-sizing: border-box;
+ font-family: 'Atma', cursive;
+
+}
