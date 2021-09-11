@@ -11,7 +11,7 @@ html {
 
 body{
  margin: 0;
- background:#F75F1C;
+ background:#F95B0B;
 }
 
 .page-title{
@@ -62,11 +62,11 @@ font-size: 4em;
     transition: transform 500ms ease-in-out;
 }
 
-.card.visible .card-back{
+.card:hover .card-back{
     transform: rotateY(-180deg);
 }
 
-.card.visible .card-front {
+.card:hover .card-front {
     transform: rotateY(0)
 }
 
