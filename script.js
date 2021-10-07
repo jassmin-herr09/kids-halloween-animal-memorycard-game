@@ -9,8 +9,8 @@ class AudioController {
          this.matchSound = new Audio('Assets/Audio/match.wav');
          this.victorySound = new Audio('Assets/Audio/victory.wav');
          this.gameOverSound = new Audio('Assets/Audio/gameover.wav');
-         this.bgMusic = 0.5; // 1 is full blast
-         this.bgMusic = true; //let music loop
+         this.bgMusic.volume = 0.5; // 1 is full blast
+         this.bgMusic.loop = true; //lets music loop
 
     }
   startMusic() {
@@ -18,10 +18,29 @@ class AudioController {
 
   }
 
+  stopMusic() {
+      this.bgMusic.pause();
+      this.bgMusic.currentTime = 0;
 
+  }
 
+ flip() {
+     this.flipSound.play();
+ }
+ match() {
+     this.victorySound.play();
+
+ }
+ victory() {
+     this.stopMusic();
+     this.victory.play();
+ }
+ gameOver() {
+     this.stopMusic();
+     this.gameOverSound.play();
+
+ }
 }
-
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text')); 
@@ -32,9 +51,9 @@ function ready() {
             overlay.classList.remove('visible');
 
             //game. start Game
-            let audioController = new AudioController();
-            audioController.startMusic();
-            
+            let audioController = new AudioController ();
+          audioController.startMusic();
+
 
         });
 
@@ -50,7 +69,7 @@ function ready() {
 
 
 if(document.readyState === 'loading') { // loading process
-    document.removeEventListener('DOMContentLoaded', ready());
+    document.addEventListener('DOMContentLoaded', ready());
   
   } else {
       ready();
