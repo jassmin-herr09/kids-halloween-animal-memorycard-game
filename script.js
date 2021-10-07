@@ -1,13 +1,3 @@
-
-if(document.readyState === 'loading') { // loading process
-    document.addEventListener('DOMContentLoaded', ready());
-  
-  } else {
-      ready();
-  }
-
-
-
 // Audio 
 class AudioController {
     constructor() {
@@ -210,4 +200,11 @@ function ready() {
 
 }
 
+
+if(document.readyState === 'loading') { // loading process
+    document.addEventListener('DOMContentLoaded', ready());
+  
+  } else {
+      ready();
+  }
 
