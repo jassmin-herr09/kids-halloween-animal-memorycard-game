@@ -216,3 +216,16 @@ font-size: 4em;
         align-items: center;
     }
 }
+
+/*.footer{
+   flex-shrink: 0;
+   color: #0B0080;
+   padding-top: 50px;
+  
+   justify-content: space-around;
+   align-items: center;
+
+  
+
+
+}*/
